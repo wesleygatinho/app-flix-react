@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './cabecalho.css'
 
 const Cabecalho = () =>{
@@ -6,10 +7,10 @@ const Cabecalho = () =>{
             <div className='imagem-aluraFlix'>
                 <img src='/imagens/aluraFlix.png' alt='Logo Alura Flix'/>
             </div>
-            <div className='botoaes'>
-                <button className='botao-home'>HOME</button>
-                <button className='botao-video'>NOVO VÍDEO</button>
-            </div>
+            <nav className='botao'>
+                <Link className='botao-home' to="/">HOME</Link>
+                <Link className='botao-video' to="enviovideo">NOVO VÍDEO</Link>
+            </nav>
         </header>
     )
 }

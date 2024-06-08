@@ -1,0 +1,45 @@
+.formulario {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #262626;
+    
+
+}
+
+.formatar-form{
+    display: flex;
+    align-items: center;
+    gap: 128px;
+}
+.formulario form {
+    /* max-width: 80%; */
+    width: 100%;
+    /* border-radius: 20px; */
+    color: #ffffff;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+}
+.formulario h2, h4, h1{
+    padding: 32px 0;
+}
+.formulario h2, h4{
+    text-align: center;
+}
+
+.formulario h2{
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.formulario h4 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.formulario h1{
+    font-weight: 600;
+    font-size: 36px;
+    border-top: 4px solid #4c4848;
+    border-bottom: 4px solid #4c4848;
+}

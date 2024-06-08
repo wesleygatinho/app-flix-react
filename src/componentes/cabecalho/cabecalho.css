@@ -12,36 +12,47 @@
 
 }
 
-.botoaes{
+.botao{
     display: flex;
     justify-content: space-between;
     padding: 32px 64px;
     gap: 64px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.botoaes button{
+.botao a{
     border-radius: 6px;
     width: 140px;
     height: 40px;
     font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
     font-weight: 900;
-    align-items: center;
+    text-decoration: none;
     cursor: pointer;
+    
 }
 
 .botao-home{
     background: var(#2271D1, #2271D1);
-    border: none;
-    border: 2px solid var(#2271D1, #2271D1);
     background: #000000E5;   
     color: #2271D1;
     box-shadow: 0px 0px 12px 4px #2271D1 inset;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    
 } 
 
 .botao-video{
     background-color: transparent;
     border: 2px solid #F5F5F5;
     color: #ffffff;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }

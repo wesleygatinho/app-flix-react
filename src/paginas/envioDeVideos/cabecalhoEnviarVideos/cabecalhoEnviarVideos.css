@@ -1,0 +1,40 @@
+.cabecalho-cabe{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.imagem-aluraFlix-flix{
+    
+    padding: 32px 32px;
+    background-color: transparent;
+}
+
+.imagem-aluraFlix-flix img{
+    width: 13%;
+}
+
+.botao-home-home{
+    background-color: transparent;
+    border: 2px solid #F5F5F5;
+    color: #ffffff;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+} 
+.botao-video-video{
+    background: var(#2271D1, #2271D1);
+    background: #000000E5;   
+    color: #2271D1;
+    box-shadow: 0px 0px 12px 4px #2271D1 inset;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    
+} 

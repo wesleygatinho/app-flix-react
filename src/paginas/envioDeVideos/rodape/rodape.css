@@ -1,0 +1,14 @@
+
+.rodape{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.rodape img{
+    width: 10%;
+    
+}

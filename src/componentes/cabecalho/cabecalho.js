@@ -3,7 +3,7 @@ import './cabecalho.css'
 
 const Cabecalho = () =>{
     return(
-        <header className='cabecalho'>
+        <header className='cabecalho-principal'>
             <div className='imagem-aluraFlix'>
                 <img src='/imagens/aluraFlix.png' alt='Logo Alura Flix'/>
             </div>

@@ -2,6 +2,7 @@ import './formularioEnvioVideos.css'
 import CampoTexto from '../campoTexto/campoTexto.js';
 import ListaSupensa from '../listaSuspensa/listaSuspensa.js';
 import { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
 import Botao from '../botao/botao.js';
 
 const FormularioEnvioVideos = (propriedades) => {
@@ -10,6 +11,10 @@ const FormularioEnvioVideos = (propriedades) => {
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
+    const [descricao, setDescricao] = useState('')
+    // const history = useHistory();
+
+    
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
@@ -23,6 +28,7 @@ const FormularioEnvioVideos = (propriedades) => {
         setCargo('')
         setImagem('')
         setTime('')
+        // history.push('/');
     }
 
     return (
@@ -51,27 +57,28 @@ const FormularioEnvioVideos = (propriedades) => {
                         obrigatorio={true}
                         label="Imagem"
                         placeholder="Insira link imagem"
-                        valor={cargo}
-                        aoAlterado={valor => setCargo(valor)}
+                        valor={imagem}
+                        aoAlterado={valor => setImagem(valor)}
                     />
                     <CampoTexto
                         label="Vídeo"
                         placeholder="Insira link vídeo"
-                        valor={imagem}
-                        aoAlterado={valor => setImagem(valor)}
+                        valor={cargo}
+                        aoAlterado={valor => setCargo(valor)}
                     />
                 </div>
                 <div className='formatar-descricao'>
                     <CampoTexto
                         label="Descrição"
                         placeholder="sobre o que é este vídeo?"
-                        valor={imagem}
-                        aoAlterado={valor => setImagem(valor)}
+                        valor={descricao}
+                        aoAlterado={valor => setDescricao(valor)}
                     />
                 </div>
                 <Botao texto1="Enviar" texto2="Limpar" /> 
             </form>
         </section>
+        
     )
 }
 

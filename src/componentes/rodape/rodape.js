@@ -1,11 +1,11 @@
 import './rodape.css'
 
-const Rodape = () => {
+const RodapeHome = () => {
     return(
-        <footer className='rodape-video'>
+        <footer className='rodape-home'>
             <img src='/imagens/aluraFlix01.png' alt='Logo AluraFlix'/>
         </footer>
     )
 }
 
-export default Rodape;
+export default RodapeHome;

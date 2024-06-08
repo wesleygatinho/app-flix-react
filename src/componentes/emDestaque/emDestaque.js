@@ -5,7 +5,7 @@ const EmDestaque = () => {
         <body className='destaques'>
             <section className='conteudos-destaque'> {/* Body  */}
                 <div className='video'>
-                    <video src='/imagens/onePiece2.mp4' autoPlay loop></video>
+                    <video src='/imagens/onePiece2.mp4' autoPlay loop controls></video>
                 </div>
                 <div className='textos'>
                     <button>FRONT END</button>

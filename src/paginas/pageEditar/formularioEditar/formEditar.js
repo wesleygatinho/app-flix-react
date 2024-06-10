@@ -1,10 +1,10 @@
-import './formularioEnvioVideos.css';
-import CampoTexto from '../campoTexto/campoTexto.js';
-import ListaSupensa from '../listaSuspensa/listaSuspensa.js';
+import './formEditar.css';
+import CampoTexto from '../campoTextoFormEditar/campoTextoFormEditar.js';
+import ListaSupensa from '../listaSuspensa/listaSuspensaFormEditar.js';
 import { useState } from 'react';
-import Botao from '../botao/botao.js';
+import BotaoFormEditar from '../botaoFormEditar/botaoFormEditar.js';
 
-const FormularioEnvioVideos = (propriedades) => {
+const FormEditar = (propriedades) => {
   const [titulo, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
@@ -26,12 +26,10 @@ const FormularioEnvioVideos = (propriedades) => {
   };
 
   return (
-    <section className='formulario'>
+    <section className='formularioEditar'>
       <form onSubmit={aoSalvar}>
-        <h2>NOVO VÍDEO</h2>
-        <h4>Complete o formulário para criar um novo card de vídeo.</h4>
-        <h1>Criar Card</h1>
-        <div className='formatar-form'>
+        <img className='botaoSair' src='../../imagens/cross.png' alt='Imagem saída'/>
+        <h2>EDITAR CARD:</h2>        
           <CampoTexto
             obrigatorio={true}
             label="Título"
@@ -46,8 +44,8 @@ const FormularioEnvioVideos = (propriedades) => {
             valor={time}
             aoAlterado={valor => setTime(valor)}
           />
-        </div>
-        <div className='formatar-form'>
+        
+        
           <CampoTexto
             obrigatorio={true}
             label="Imagem"
@@ -61,19 +59,19 @@ const FormularioEnvioVideos = (propriedades) => {
             valor={cargo}
             aoAlterado={valor => setCargo(valor)}
           />
-        </div>
-        <div className='formatar-descricao'>
+        
+        
           <CampoTexto
             label="Descrição"
             placeholder="Sobre o que é este vídeo?"
             valor={descricao}
             aoAlterado={valor => setDescricao(valor)}
           />
-        </div>
-        <Botao texto1="Enviar" texto2="Limpar" />
+        
+        <BotaoFormEditar/>
       </form>
     </section>
   );
 };
 
-export default FormularioEnvioVideos;
+export default FormEditar;

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import { useState } from 'react';
 import PageInicio from "./paginas/inicio/inicio.js";
 import EnviarVideo from "./paginas/envioDeVideos/envioDeVideos.js";
+import PageEditar from "./paginas/pageEditar/pageEditar.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<PageInicio/>}/>
         <Route path="/envioVideo" element={<EnviarVideo/>}/>
         <Route path="*" element={<h1>Página não encontrada</h1>}/>
+        <Route path="/video" element={<PageEditar/>}/>
       </Routes>
     </BrowserRouter>
   );

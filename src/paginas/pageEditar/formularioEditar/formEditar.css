@@ -1,7 +1,7 @@
 .formularioEditar {
     display: flex;
     justify-content: center;
-    margin: 80px 0;
+    /* margin: 80px 0;s */
     /* background-color: #03122F; */
     
 
@@ -40,4 +40,10 @@
     font-size: 36px;
     border-top: 4px solid #4c4848;
     border-bottom: 4px solid #4c4848;
+}
+
+.botaoSair{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
 }

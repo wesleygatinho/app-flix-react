@@ -1,4 +1,3 @@
-
 import CabecalhoEnviarVideos from './cabecalhoEnviarVideos/cabecalhoEnviarVideos';
 import FormularioEnvioVideos from './formulario/formularioEnvioVideos';
 import { useState } from 'react';

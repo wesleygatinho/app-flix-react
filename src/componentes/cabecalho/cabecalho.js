@@ -9,7 +9,7 @@ const Cabecalho = () =>{
             </div>
             <nav className='botao'>
                 <Link className='botao-home' to="/">HOME</Link>
-                <Link className='botao-video' to="enviovideo">NOVO VÍDEO</Link>
+                <Link className='botao-video' to="/enviovideo">NOVO VÍDEO</Link>
             </nav>
         </header>
     )

@@ -4,7 +4,7 @@ import ListaSupensa from '../listaSuspensa/listaSuspensaFormEditar.js';
 import { useState } from 'react';
 import BotaoFormEditar from '../botaoFormEditar/botaoFormEditar.js';
 
-const FormEditar = (propriedades) => {
+const FormEditar = ({onClose, times, aoVideoCadastrado}) => {
   const [titulo, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
@@ -13,7 +13,7 @@ const FormEditar = (propriedades) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    propriedades.aoVideoCadastrado({
+    aoVideoCadastrado({
       titulo,
       cargo,
       imagem,
@@ -26,9 +26,9 @@ const FormEditar = (propriedades) => {
   };
 
   return (
-    <section className='formularioEditar'>
+    <div className='formularioEditar'>
       <form onSubmit={aoSalvar}>
-        <img className='botaoSair' src='../../imagens/cross.png' alt='Imagem saída'/>
+        <img className='botaoSair' onClick={onClose} src='../../imagens/cross.png' alt='Imagem saída'/>
         <h2>EDITAR CARD:</h2>        
           <CampoTexto
             obrigatorio={true}
@@ -40,7 +40,7 @@ const FormEditar = (propriedades) => {
           <ListaSupensa
             obrigatorio={true}
             label="Categoria"
-            itens={propriedades.times}
+            itens={times}
             valor={time}
             aoAlterado={valor => setTime(valor)}
           />
@@ -70,7 +70,7 @@ const FormEditar = (propriedades) => {
         
         <BotaoFormEditar/>
       </form>
-    </section>
+    </div>
   );
 };
 

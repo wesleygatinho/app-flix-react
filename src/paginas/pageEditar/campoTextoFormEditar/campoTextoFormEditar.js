@@ -1,17 +1,17 @@
 import './campoTextoFormEditar.css'
 
-const CampoTexto = (propriedades) => {
+const CampoTexto = ({label, valor, aoAlterado, obrigatorio, placeholder}) => {
     
 
     
     const aoDigitado = (evento) => {
-        propriedades.aoAlterado(evento.target.value)
+        aoAlterado(evento.target.value)
     }
 
     return (
         <div className="campoTextoFormEditar">
-            <label>{propriedades.label}</label>
-            <input value={propriedades.valor} onChange={aoDigitado} required={propriedades.obrigatorio} placeholder={propriedades.placeholder} />
+            <label>{label}</label>
+            <input value={valor} onChange={aoDigitado} required={obrigatorio} placeholder={placeholder} />
         </div>
     )
 }

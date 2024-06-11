@@ -4,29 +4,31 @@ import ListaSupensa from '../listaSuspensa/listaSuspensa.js';
 import { useState } from 'react';
 import Botao from '../botao/botao.js';
 
-const FormularioEnvioVideos = (propriedades) => {
-  const [titulo, setNome] = useState('');
-  const [cargo, setCargo] = useState('');
+const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
+  const [titulo, setTitulo] = useState('');
+  const [categoria, setCategoria] = useState('');
   const [imagem, setImagem] = useState('');
-  const [time, setTime] = useState('');
+  const [video, setVideo] = useState('');
   const [descricao, setDescricao] = useState('');
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    propriedades.aoVideoCadastrado({
+    aoVideoCadastrado({
       titulo,
-      cargo,
+      categoria,
       imagem,
-      time
+      video,
+      descricao
     });
-    setNome('');
-    setCargo('');
+    setTitulo('');
+    setCategoria('');
     setImagem('');
-    setTime('');
+    setVideo('');
+    setDescricao('');
   };
 
   return (
-    <section className='formulario'>
+    <section className='formulario' data-formulario>
       <form onSubmit={aoSalvar}>
         <h2>NOVO VÍDEO</h2>
         <h4>Complete o formulário para criar um novo card de vídeo.</h4>
@@ -37,14 +39,16 @@ const FormularioEnvioVideos = (propriedades) => {
             label="Título"
             placeholder="Insira o título"
             valor={titulo}
-            aoAlterado={valor => setNome(valor)}
+            aoAlterado={valor => setTitulo(valor)}
+            dataForm="titulo"
           />
           <ListaSupensa
             obrigatorio={true}
             label="Categoria"
-            itens={propriedades.times}
-            valor={time}
-            aoAlterado={valor => setTime(valor)}
+            itens={times}
+            valor={categoria}
+            aoAlterado={valor => setCategoria(valor)}
+            dataForm="categoria"
           />
         </div>
         <div className='formatar-form'>
@@ -54,20 +58,25 @@ const FormularioEnvioVideos = (propriedades) => {
             placeholder="Insira link imagem"
             valor={imagem}
             aoAlterado={valor => setImagem(valor)}
+            dataForm="imagem"
           />
           <CampoTexto
+            obrigatorio={true}
             label="Vídeo"
             placeholder="Insira link vídeo"
-            valor={cargo}
-            aoAlterado={valor => setCargo(valor)}
+            valor={video}
+            aoAlterado={valor => setVideo(valor)}
+            dataForm="video"
           />
         </div>
         <div className='formatar-descricao'>
           <CampoTexto
+            obrigatorio={true}
             label="Descrição"
             placeholder="Sobre o que é este vídeo?"
             valor={descricao}
             aoAlterado={valor => setDescricao(valor)}
+            dataForm="descricao"
           />
         </div>
         <Botao texto1="Enviar" texto2="Limpar" />

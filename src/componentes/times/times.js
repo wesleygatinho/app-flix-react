@@ -1,32 +1,55 @@
+// import PageEditar from '../../paginas/pageEditar/pageEditar';
 import VideosPlataforma from '../videosPlataforma/videosPlataforma';
 import './times.css';
+import { useState } from 'react';
+import ModalEditarVideo from '../../paginas/modalEditarVideo/modalEditarVideo';
 
-const Times = (propriedades) => {
+const Times = ({nome, corPrimaria, colaboradores, deletar, editar}) => {
+
+  const [openModal, setOpenModal] = useState(false);
+  const [videoSelecionado, setVideoSelecionado] = useState(null);
+
+  const editarVideo = (colaborador) => {
+    setVideoSelecionado(colaborador);
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
   return (
-    propriedades.colaboradores.length > 0 && (
-      <section className='time'>
+    colaboradores.length > 0 && (
+      
+      <div className='time'> 
         <h3
           style={{
-            borderColor: propriedades.corPrimaria,
-            backgroundColor: propriedades.corPrimaria
+            borderColor: corPrimaria,
+            backgroundColor: corPrimaria
           }}
         >
-          {propriedades.nome}
+          {nome}
         </h3>
         <div className='colaboradores'>
-          {propriedades.colaboradores.map((colaborador) => (
+          {colaboradores.map((colaborador) => (
             <VideosPlataforma
               key={colaborador.id}
               id={colaborador.id} 
               nome={colaborador.nome}
               cargo={colaborador.cargo}
               imagem={colaborador.imagem}
-              corDeFundo={propriedades.corPrimaria}
-              deletar={propriedades.deletar}
+              corDeFundo={corPrimaria}
+              deletar={deletar}
+              editar={editarVideo}
             />
+            
           ))}
         </div>
-      </section>
+        {openModal && (
+        <ModalEditarVideo video={videoSelecionado} onClose={handleCloseModal}/>
+       )}
+      </div>
+      
+      
     )
   );
 };

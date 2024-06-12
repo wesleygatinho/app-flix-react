@@ -1,11 +1,9 @@
-// import PageEditar from '../../paginas/pageEditar/pageEditar';
-import VideosPlataforma from '../videosPlataforma/videosPlataforma';
 import './times.css';
+import VideosPlataforma from '../videosPlataforma/videosPlataforma';
 import { useState } from 'react';
 import ModalEditarVideo from '../../paginas/modalEditarVideo/modalEditarVideo';
 
-const Times = ({nome, corPrimaria, colaboradores, deletar, editar}) => {
-
+const Times = ({ titulo, corPrimaria, colaboradores, deletar, editarDoCompTime }) => {
   const [openModal, setOpenModal] = useState(false);
   const [videoSelecionado, setVideoSelecionado] = useState(null);
 
@@ -17,39 +15,36 @@ const Times = ({nome, corPrimaria, colaboradores, deletar, editar}) => {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
+  const handleEditarModal = (id, dadosEditados) => {
+    editarDoCompTime(id, dadosEditados); // Envia os dados editados para a função de editar no componente pai
+    handleCloseModal();
+  };
+
   return (
     colaboradores.length > 0 && (
-      
-      <div className='time'> 
-        <h3
-          style={{
-            borderColor: corPrimaria,
-            backgroundColor: corPrimaria
-          }}
-        >
-          {nome}
-        </h3>
+      <div className='time'>
+        <h3 style={{ borderColor: corPrimaria, backgroundColor: corPrimaria }}>{titulo}</h3>
         <div className='colaboradores'>
           {colaboradores.map((colaborador) => (
             <VideosPlataforma
               key={colaborador.id}
-              id={colaborador.id} 
-              nome={colaborador.nome}
-              cargo={colaborador.cargo}
+              id={colaborador.id}
+              titulo={colaborador.titulo}
+              categoria={colaborador.categoria}
               imagem={colaborador.imagem}
+              video={colaborador.video}
+              descricao={colaborador.descricao}
               corDeFundo={corPrimaria}
               deletar={deletar}
-              editar={editarVideo}
+              editarDoCompVideos={() => editarVideo(colaborador)}
             />
-            
           ))}
         </div>
         {openModal && (
-        <ModalEditarVideo video={videoSelecionado} onClose={handleCloseModal}/>
-       )}
+          <ModalEditarVideo video={videoSelecionado} onClose={handleCloseModal} editarDoCompModal={editarDoCompTime} />
+        )}
       </div>
-      
-      
     )
   );
 };

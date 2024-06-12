@@ -28,7 +28,7 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
   };
 
   return (
-    <section className='formulario' data-formulario>
+    <section className='formulario'>
       <form onSubmit={aoSalvar}>
         <h2>NOVO VÍDEO</h2>
         <h4>Complete o formulário para criar um novo card de vídeo.</h4>
@@ -40,7 +40,6 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             placeholder="Insira o título"
             valor={titulo}
             aoAlterado={valor => setTitulo(valor)}
-            dataForm="titulo"
           />
           <ListaSupensa
             obrigatorio={true}
@@ -48,7 +47,6 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             itens={times}
             valor={categoria}
             aoAlterado={valor => setCategoria(valor)}
-            dataForm="categoria"
           />
         </div>
         <div className='formatar-form'>
@@ -58,7 +56,6 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             placeholder="Insira link imagem"
             valor={imagem}
             aoAlterado={valor => setImagem(valor)}
-            dataForm="imagem"
           />
           <CampoTexto
             obrigatorio={true}
@@ -66,7 +63,6 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             placeholder="Insira link vídeo"
             valor={video}
             aoAlterado={valor => setVideo(valor)}
-            dataForm="video"
           />
         </div>
         <div className='formatar-descricao'>
@@ -76,7 +72,6 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             placeholder="Sobre o que é este vídeo?"
             valor={descricao}
             aoAlterado={valor => setDescricao(valor)}
-            dataForm="descricao"
           />
         </div>
         <Botao texto1="Enviar" texto2="Limpar" />

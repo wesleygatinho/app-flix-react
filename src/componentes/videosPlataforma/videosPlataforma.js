@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import './videosPlataforma.css';
-// import { useState } from 'react';
 
-const VideosPlataforma = ({corDeFundo, editar, imagem, nome, id, deletar}) => {
+const VideosPlataforma = ({corDeFundo, editarDoCompVideos, imagem, titulo, id, deletar}) => {
 
     return (
         <div className="colaborador" style={{ border: `5px solid ${corDeFundo}` }}>
             <div className="cabecalho">
-                <img src={imagem} alt={nome} />
+                <img src={imagem} alt={titulo} />
             </div>
             <div className="rodape">
                 <Link>
@@ -22,7 +21,7 @@ const VideosPlataforma = ({corDeFundo, editar, imagem, nome, id, deletar}) => {
                 <Link>
                     <img
                         className="imagens-card"
-                        onClick={() =>editar(id)}
+                        onClick={() =>editarDoCompVideos(id)}
                         src="/imagens/editar.png"
                         alt="Imagem Editar"
                     />

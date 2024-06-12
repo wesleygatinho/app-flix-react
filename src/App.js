@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageInicio from "./paginas/inicio/inicio.js";
 import EnviarVideo from "./paginas/envioDeVideos/envioDeVideos.js";
-// import { VideoProvider } from "./VideosContext.js";  // Corrija o nome do import para "VideoProvider"
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import './listaSuspensaFormEditar.css'
 
-const ListaSupensa = ({label, aoAlterado, itens, required, valor}) => {
+const ListaSupensaFormEditar = ({label, aoAlterado, itens, required, valor}) => {
     return(
         <div className='listaSuspensaFormEditar'>
             <label>
@@ -16,4 +16,4 @@ const ListaSupensa = ({label, aoAlterado, itens, required, valor}) => {
     )
 }
 
-export default ListaSupensa;
+export default ListaSupensaFormEditar;

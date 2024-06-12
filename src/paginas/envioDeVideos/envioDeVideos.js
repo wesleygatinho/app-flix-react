@@ -1,52 +1,30 @@
 import CabecalhoEnviarVideos from './cabecalhoEnviarVideos/cabecalhoEnviarVideos';
 import FormularioEnvioVideos from './formulario/formularioEnvioVideos';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Rodape from './rodape/rodape';
 
 const EnviarVideo = () => {
-  const times = [
-    {
-      nome: 'Programação',
-      corPrimaria: '#57C278',
-      corSecundaria: '#D9F7E9'
-    },
-    {
-      nome: 'Front-End',
-      corPrimaria: '#82CFFA',
-      corSecundaria: '#E8F8FF'
-    },
-    {
-      nome: 'Data Science',
-      corPrimaria: '#A6D157',
-      corSecundaria: '#F0F8E2'
-    },
-    {
-      nome: 'Devops',
-      corPrimaria: '#E06B69',
-      corSecundaria: '#FDE7E8'
-    },
-    {
-      nome: 'UX e Design',
-      corPrimaria: '#DB6EBF',
-      corSecundaria: '#FAE9F5'
-    },
-    {
-      nome: 'Mobile',
-      corPrimaria: '#FFBA05',
-      corSecundaria: '#FFF5D9'
-    },
-    {
-      nome: 'Inovação e Gestão',
-      corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF'
-    }
-  ]
+  const [times, setTimes] = useState([]);
+  const [videosDaPlataforma, setVideosDaPlataforma] = useState([]);
 
-  const [videosDaPlataforma, setvideosDaPlataforma] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:3001/times')
+      .then(response => setTimes(response.data))
+      .catch(error => console.error("Erro ao buscar times:", error));
+      
+    axios.get('http://localhost:3001/videosDaPlataforma')
+      .then(response => setVideosDaPlataforma(response.data))
+      .catch(error => console.error("Erro ao buscar vídeos:", error));
+  }, []);
 
   const aoNovoVideoAdicionado = (colaborador) => {
-    setvideosDaPlataforma([...videosDaPlataforma, colaborador]);
-  }
+    axios.post('http://localhost:3001/videosDaPlataforma', colaborador)
+      .then(response => {
+        setVideosDaPlataforma(prevVideos => [...prevVideos, response.data]);
+      })
+      .catch(error => console.error("Erro ao adicionar vídeo:", error));
+  };
 
   return (
     <div>

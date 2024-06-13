@@ -1,10 +1,6 @@
 .formularioEditar {
     display: flex;
     justify-content: center;
-    /* margin: 80px 0;s */
-    /* background-color: #03122F; */
-    
-
 }
 
 .formularioEditar form {
@@ -46,4 +42,11 @@
     cursor: pointer;
     display: flex;
     justify-content: flex-end;
+}
+
+
+@media (max-width: 1020px){
+    .formularioEditar form{
+        padding: 12px 12px;
+    }
 }

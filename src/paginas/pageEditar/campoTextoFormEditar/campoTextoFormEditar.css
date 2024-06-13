@@ -23,3 +23,10 @@
     padding: 24px;
     box-sizing: border-box;
 }
+
+
+@media (max-width: 1020px){
+    .campoTextoFormEditar input{
+        width: 100%;
+    }
+}

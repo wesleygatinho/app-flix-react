@@ -1,14 +1,39 @@
-.rodape-home{
+.rodape-home {
     background-color: #000;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
+    box-shadow: 0 -10px 20px -5px rgba(34, 113, 209, 0.8); /* Sombra externa na parte superior */
 }
 
-.rodape-home img{
-    width: 10%;
+
+.logo-aluraFlix{
+    width: 12%;
     min-width: 178px;
     min-height: 42px;
+}
+
+.cabecalho-invertido{
+    display: none;
+}
+
+
+@media (max-width: 725px){
+    .rodape-home{
+        display: flex;
+        height: 100px;
+    }
+    .logo-aluraFlix{
+        display: none;
+    }
+    .cabecalho-invertido{
+        display: list-item;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+    }
+    
 }

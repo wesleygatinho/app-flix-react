@@ -40,7 +40,7 @@
     align-items: center;   
 } 
 
-@media (max-width: 650px){
+@media (max-width: 724px){
     .cabecalho-cabe{
         display: none;
     }    

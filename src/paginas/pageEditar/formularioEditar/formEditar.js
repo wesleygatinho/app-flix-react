@@ -22,6 +22,11 @@ const FormEditar = ({ video, onClose, onSubmit, times }) => {
       video: videoLink,
       descricao
     });
+    setTitulo('');
+    setCategoria('');
+    setImagem('');
+    setVideoLink('');
+    setDescricao('');
   };
 
   return (
@@ -34,15 +39,15 @@ const FormEditar = ({ video, onClose, onSubmit, times }) => {
           label="Título"
           placeholder="Insira o título"
           valor={titulo}
-          aoAlterado={setTitulo}
+          aoAlterado={valor => setTitulo(valor)}
         />
-        {/* <ListaSupensaFormEditar
+        <ListaSupensaFormEditar
           obrigatorio={true}
           label="Categoria"
           itens={times}
           valor={categoria}
-          aoAlterado={setCategoria}
-        /> */}
+          aoAlterado={valor => setCategoria(valor)}
+        />
         <CampoTexto
           obrigatorio={true}
           label="Imagem"

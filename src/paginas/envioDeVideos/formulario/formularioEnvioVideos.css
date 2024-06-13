@@ -3,8 +3,11 @@
     justify-content: center;
     width: 100%;
     background-color: #262626;
-    
-
+    border-bottom: 4px solid var(--Blue, #2271D1);   
+    box-shadow: 
+        inset 0 10px 20px -5px rgba(34, 113, 209, 0.8), /* Sombra superior */
+        inset 0 -10px 20px -5px rgba(34, 113, 209, 0.8); /* Sombra inferior */
+ 
 }
 
 .formatar-form{
@@ -41,11 +44,6 @@
     border-top: 4px solid #4c4848;
     border-bottom: 4px solid #4c4848;
 }
-
-/* .formatar-descricao > .campo-texto input{
-    height: 300px;
-    display: flex;
-} */
 
 @media (max-width: 1250px){
     .formatar-form{

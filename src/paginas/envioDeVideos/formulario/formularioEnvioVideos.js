@@ -65,7 +65,7 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             aoAlterado={valor => setVideo(valor)}
           />
         </div>
-        <div className='formatar-descricao'>
+        <div className='formatar-form'>
           <CampoTexto
             obrigatorio={true}
             label="Descrição"
@@ -74,7 +74,7 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             aoAlterado={valor => setDescricao(valor)}
           />
         </div>
-        <Botao texto1="Enviar" texto2="Limpar" />
+        <Botao texto1="ENVIAR" texto2="LIMPAR" />
       </form>
     </section>
   );

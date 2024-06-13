@@ -4,16 +4,20 @@
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .imagem-aluraFlix-flix{
-    
+    max-width: 233.99px;
+    max-height: 109.44px;
     padding: 32px 32px;
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 .imagem-aluraFlix-flix img{
     width: 13%;
+    min-width: 178px;
+    min-height: 42;
 }
 
 .botao-home-home{
@@ -30,11 +34,14 @@
     background: var(#2271D1, #2271D1);
     background: #000000E5;   
     color: #2271D1;
-    box-shadow: 0px 0px 12px 4px #2271D1 inset;
-    
+    box-shadow: 0px 0px 12px 4px #2271D1 inset;    
     display: flex;
     justify-content: center; 
-    align-items: center; 
-    
-    
+    align-items: center;   
 } 
+
+@media (max-width: 650px){
+    .cabecalho-cabe{
+        display: none;
+    }    
+}

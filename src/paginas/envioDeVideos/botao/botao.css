@@ -47,3 +47,9 @@
     font-size: 25px;
     font-weight: 900;
 }
+
+@media (max-width: 650px){
+    .botao-enviarVideos{
+        flex-direction: column;
+    }
+}

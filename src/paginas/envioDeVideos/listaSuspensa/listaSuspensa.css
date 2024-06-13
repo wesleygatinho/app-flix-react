@@ -1,3 +1,6 @@
+.lista-suspensa{
+    width: 500px;
+}
 .lista-suspensa label{
     display: block;
     margin-bottom: 8px;
@@ -15,4 +18,11 @@
     padding: 24px;
     color: #fff;
     box-sizing: border-box;
+}
+
+@media (max-width: 650px) {
+    .lista-suspensa{
+        width: 100%;
+    }
+    
 }

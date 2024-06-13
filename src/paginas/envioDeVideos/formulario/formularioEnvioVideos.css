@@ -13,9 +13,7 @@
     gap: 128px;
 }
 .formulario form {
-    /* max-width: 80%; */
     width: 100%;
-    /* border-radius: 20px; */
     color: #ffffff;
     padding: 36px 64px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
@@ -42,4 +40,26 @@
     font-size: 36px;
     border-top: 4px solid #4c4848;
     border-bottom: 4px solid #4c4848;
+}
+
+/* .formatar-descricao > .campo-texto input{
+    height: 300px;
+    display: flex;
+} */
+
+@media (max-width: 1250px){
+    .formatar-form{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 650px){
+    .formulario form{
+        padding: 12px 12px;
+    }
+
+    .formulario h2, h4, h1{
+        padding: 5px 0;
+    }
 }

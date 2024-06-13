@@ -9,5 +9,6 @@
 
 .rodape-home img{
     width: 10%;
-    
+    min-width: 178px;
+    min-height: 42px;
 }

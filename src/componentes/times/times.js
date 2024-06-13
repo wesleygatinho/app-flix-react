@@ -24,26 +24,31 @@ const Times = ({ titulo, corPrimaria, colaboradores, deletar, editarDoCompTime }
   return (
     colaboradores.length > 0 && (
       <div className='time'>
-        <h3 style={{ borderColor: corPrimaria, backgroundColor: corPrimaria }}>{titulo}</h3>
-        <div className='colaboradores'>
-          {colaboradores.map((colaborador) => (
-            <VideosPlataforma
-              key={colaborador.id}
-              id={colaborador.id}
-              titulo={colaborador.titulo}
-              categoria={colaborador.categoria}
-              imagem={colaborador.imagem}
-              video={colaborador.video}
-              descricao={colaborador.descricao}
-              corDeFundo={corPrimaria}
-              deletar={deletar}
-              editarDoCompVideos={() => editarVideo(colaborador)}
-            />
-          ))}
+        <div className='timeDoTime'>
+         
+          <div className='titulo-time'><h3 style={{ borderColor: corPrimaria, backgroundColor: corPrimaria }}>{titulo}</h3></div>
+          
+          <div className='colaboradores'>
+            {colaboradores.map((colaborador) => (
+              <VideosPlataforma
+                key={colaborador.id}
+                id={colaborador.id}
+                titulo={colaborador.titulo}
+                categoria={colaborador.categoria}
+                imagem={colaborador.imagem}
+                video={colaborador.video}
+                descricao={colaborador.descricao}
+                corDeFundo={corPrimaria}
+                deletar={deletar}
+                editarDoCompVideos={() => editarVideo(colaborador)}
+              />
+            ))}
+          </div>
+          {openModal && (
+            <ModalEditarVideo video={videoSelecionado} onClose={handleCloseModal} editarDoCompModal={editarDoCompTime} />
+          )}
         </div>
-        {openModal && (
-          <ModalEditarVideo video={videoSelecionado} onClose={handleCloseModal} editarDoCompModal={editarDoCompTime} />
-        )}
+
       </div>
     )
   );

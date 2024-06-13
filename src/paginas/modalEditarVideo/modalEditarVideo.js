@@ -11,7 +11,7 @@ const ModalEditarVideo = ({ video, onClose, editarDoCompModal }) => {
   };
 
   const handleSubmit = (evento) => {
-    evento.preventDefault();
+    // evento.preventDefault();
     editarDoCompModal(video.id, dadosEditados); // Envia os dados editados para o componente pai
     onClose();
   };

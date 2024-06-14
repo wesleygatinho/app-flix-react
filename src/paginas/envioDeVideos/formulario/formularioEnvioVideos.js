@@ -20,6 +20,10 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
       video,
       descricao
     });
+    limparCampos();
+  };
+
+  const limparCampos = () => {
     setTitulo('');
     setCategoria('');
     setImagem('');
@@ -74,7 +78,7 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
             aoAlterado={valor => setDescricao(valor)}
           />
         </div>
-        <Botao texto1="ENVIAR" texto2="LIMPAR" />
+        <Botao texto1="ENVIAR" texto2="LIMPAR" limparForm={limparCampos} />
       </form>
     </section>
   );

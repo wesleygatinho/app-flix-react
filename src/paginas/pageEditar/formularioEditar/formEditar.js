@@ -22,6 +22,10 @@ const FormEditar = ({ video, onClose, onSubmit, times }) => {
       video: videoLink,
       descricao
     });
+    limparCampos();
+  };
+
+  const limparCampos = () => {
     setTitulo('');
     setCategoria('');
     setImagem('');
@@ -67,7 +71,7 @@ const FormEditar = ({ video, onClose, onSubmit, times }) => {
           valor={descricao}
           aoAlterado={setDescricao}
         />
-        <BotaoFormEditar />
+        <BotaoFormEditar limparForm={limparCampos}/>
       </form>
     </div>
   );

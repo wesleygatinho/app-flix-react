@@ -1,10 +1,10 @@
 import './botaoFormEditar.css'
 
-const BotaoFormEditar = () => {
+const BotaoFormEditar = ({limparForm}) => {
     return (
         <div className='botaoFormEditar'>
-            <button className='botaoGuardarFormEditar'>GUARDAR</button>
-            <button className='botaoLimparFormEditar'>LIMPAR</button>
+            <button className='botaoGuardarFormEditar' type='submit'>GUARDAR</button>
+            <button className='botaoLimparFormEditar'type='button' onClick={limparForm}>LIMPAR</button>
         </div>
     )
 }

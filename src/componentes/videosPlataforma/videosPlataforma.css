@@ -1,28 +1,19 @@
 .colaborador {
     width: 430px;
-    border: 4px solid blueviolet;
     border-radius: 10px;
     min-width: 422px;
     min-height: 516px;
-    /* box-shadow: 20px 20px 170px 800px #6BD1FF inset; */
 }
 
-.colaborador .cabecalho {
+.cabecalho {
     width: 100%;
-    
-    /* border-radius: 100px; */
-    /* box-shadow: 0px 0px 17px 80px #6BD1FF inset; */
 }
-.colaborador img {
+.img-cabecalho {
     width: 100%;
-    border-radius: 1%; 
-    position: relative;
-    cursor: pointer;
-    
-    /* bottom: -50px; */
+    border-radius: 1%;    
 }
 
-.colaborador .rodape {
+.rodape {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,15 +25,26 @@
     padding-bottom: 1px;
 }
 
-.colaborador .rodape h4 {
+.rodape div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    gap: 16px;
+}
+
+.rodape img{
+    cursor: pointer;
+}
+
+.rodape h4 {
     color: #fff;
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
-    /* margin-bottom: 8px; */
 }
 
-.colaborador .rodape h5 {
+.rodape h5 {
     font-size: 18px;
     line-height: 22px;
     color: #212121;
@@ -51,6 +53,5 @@
 
 
 .imagens-card {
-    width: 5%;
-    
+    width: 100%;    
 }

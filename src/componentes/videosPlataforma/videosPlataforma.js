@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import './videosPlataforma.css';
 
 const VideosPlataforma = ({corDeFundo, editarDoCompVideos, imagem, titulo, id, deletar}) => {
@@ -6,27 +6,29 @@ const VideosPlataforma = ({corDeFundo, editarDoCompVideos, imagem, titulo, id, d
     return (
         <div className="colaborador" style={{ border: `5px solid ${corDeFundo}` }}>
             <div className="cabecalho">
-                <img src={imagem} alt={titulo} />
+                <img className='img-cabecalho' src={imagem} alt={titulo} />
             </div>
             <div className="rodape">
-                <Link>
+                <div>
                     <img
                         className="imagens-card"
                         onClick={() => deletar(id)}
                         src="/imagens/lixeira.png"
                         alt="Imagem lixeira"
                     />
-                </Link>
-                <h4>DELETAR</h4>
-                <Link>
+                    <h4>DELETAR</h4>
+                </div>
+                
+                <div>
                     <img
                         className="imagens-card"
                         onClick={() =>editarDoCompVideos(id)}
                         src="/imagens/editar.png"
                         alt="Imagem Editar"
                     />
-                </Link>
-                <h4>EDITAR</h4>
+                    <h4>EDITAR</h4>
+                </div>
+                
             </div>
         </div>
     );

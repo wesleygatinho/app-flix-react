@@ -9,8 +9,7 @@
 }
 
 .foto-alura-flix{
-    width: 10%;
-    
+    width: 10%;    
 }
 
 .cabecalhoVideo-invertido{
@@ -29,5 +28,9 @@
         justify-content: center;
         align-items: center;
         gap: 64px;
+    }
+
+    .cabecalhoVideo-invertido img{
+        width: 80%;
     }
 }

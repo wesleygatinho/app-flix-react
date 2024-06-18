@@ -5,35 +5,42 @@
     justify-content: center;
     align-items: center;
     height: 80px;
-    box-shadow: 0 -10px 20px -5px rgba(34, 113, 209, 0.8); /* Sombra externa na parte superior */
+    box-shadow: 0 -10px 20px -5px rgba(34, 113, 209, 0.8);
+    /* Sombra externa na parte superior */
 }
 
 
-.logo-aluraFlix{
+.logo-aluraFlix {
     width: 12%;
     min-width: 178px;
     min-height: 42px;
 }
 
-.cabecalho-invertido{
+.cabecalho-invertido {
     display: none;
 }
 
 
-@media (max-width: 725px){
-    .rodape-home{
+@media (max-width: 725px) {
+    .rodape-home {
         display: flex;
         height: 100px;
     }
-    .logo-aluraFlix{
+
+    .logo-aluraFlix {
         display: none;
     }
-    .cabecalho-invertido{
+
+    .cabecalho-invertido {
         display: list-item;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 64px;
     }
-    
+
+    .cabecalho-invertido img {
+        width: 80%;
+    }
+
 }

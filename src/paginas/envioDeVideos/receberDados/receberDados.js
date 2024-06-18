@@ -15,9 +15,7 @@ const ReceberDados = () => {
     axios.get('http://localhost:3001/videosDaPlataforma')
       .then(response => setVideosDaPlataforma(response.data))
       .catch(error => console.error("Erro ao buscar vídeos:", error));
-  }, []);
-
-  
+  }, []);  
 
   const deletarVideo = (id) => {
     axios.delete(`http://localhost:3001/videosDaPlataforma/${id}`)
@@ -25,20 +23,10 @@ const ReceberDados = () => {
         setVideosDaPlataforma(prevVideos => prevVideos.filter(colaborador => colaborador.id !== id));
       })
       .catch(error => console.error("Erro ao deletar vídeo:", error));
-  };
-
-  const editarVideo = (id, colaboradorAtualizado) => {
-    axios.put(`http://localhost:3001/videosDaPlataforma/${id}`, colaboradorAtualizado)
-      .then(response => {
-        setVideosDaPlataforma(videosDaPlataforma.map(colaborador =>
-          colaborador.id === id ? response.data : colaborador
-        ));
-      });
-  };
+  };  
 
   return (
-    <>
-      
+    <>      
       {times.map(time => (
         <Times
           key={time.nome}
@@ -47,7 +35,7 @@ const ReceberDados = () => {
           corSecundaria={time.corSecundaria}
           colaboradores={videosDaPlataforma.filter(colaborador => colaborador.categoria === time.nome)}
           deletar={deletarVideo}
-          editarDoCompTime={editarVideo}
+          editar={setVideosDaPlataforma}
         />
       ))}
     </>

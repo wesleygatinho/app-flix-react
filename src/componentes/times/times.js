@@ -3,7 +3,7 @@ import VideosPlataforma from '../videosPlataforma/videosPlataforma';
 import { useState } from 'react';
 import ModalEditarVideo from '../../paginas/modalEditarVideo/modalEditarVideo';
 
-const Times = ({ titulo, corPrimaria, colaboradores, deletar, editarDoCompTime }) => {
+const Times = ({ titulo, corPrimaria, colaboradores, deletar, editar }) => {
   const [openModal, setOpenModal] = useState(false);
   const [videoSelecionado, setVideoSelecionado] = useState(null);
 
@@ -16,18 +16,19 @@ const Times = ({ titulo, corPrimaria, colaboradores, deletar, editarDoCompTime }
     setOpenModal(false);
   };
 
-  const handleEditarModal = (id, dadosEditados) => {
-    editarDoCompTime(id, dadosEditados); // Envia os dados editados para a função de editar no componente pai
-    handleCloseModal();
+  const atualizarVideo = (videoEditado) => {
+    editar(prevColaboradores => prevColaboradores.map(colaborador =>
+      colaborador.id === videoEditado.id ? videoEditado : colaborador
+    ));
   };
 
   return (
     colaboradores.length > 0 && (
       <div className='time'>
         <div className='timeDoTime'>
-         
+
           <div className='titulo-time'><h3 style={{ borderColor: corPrimaria, backgroundColor: corPrimaria }}>{titulo}</h3></div>
-          
+
           <div className='colaboradores'>
             {colaboradores.map((colaborador) => (
               <VideosPlataforma
@@ -45,7 +46,8 @@ const Times = ({ titulo, corPrimaria, colaboradores, deletar, editarDoCompTime }
             ))}
           </div>
           {openModal && (
-            <ModalEditarVideo video={videoSelecionado} onClose={handleCloseModal} editarDoCompModal={editarDoCompTime} />
+            <ModalEditarVideo onClose={handleCloseModal}
+              videoSelecionado={videoSelecionado} atualizarVideo={atualizarVideo} />
           )}
         </div>
 

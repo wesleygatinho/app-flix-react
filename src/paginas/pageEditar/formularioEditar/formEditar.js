@@ -1,42 +1,42 @@
 import './formEditar.css';
 import CampoTexto from '../campoTextoFormEditar/campoTextoFormEditar.js';
-
+import axios from 'axios';
 import { useState } from 'react';
 import BotaoFormEditar from '../botaoFormEditar/botaoFormEditar.js';
 import ListaSupensaFormEditar from '../listaSuspensa/listaSuspensaFormEditar.js';
 
-const FormEditar = ({ video, onClose, onSubmit, times }) => {
-  const [titulo, setTitulo] = useState(video.titulo || '');
-  const [categoria, setCategoria] = useState(video.categoria || '');
-  const [imagem, setImagem] = useState(video.imagem || '');
-  const [videoLink, setVideoLink] = useState(video.video || '');
-  const [descricao, setDescricao] = useState(video.descricao || '');
+const FormEditar = ({ onClose, times, videoSelecionado, atualizarVideo }) => {
+  const [titulo, setTitulo] = useState(videoSelecionado.titulo);
+  const [categoria, setCategoria] = useState(videoSelecionado.categoria);
+  const [imagem, setImagem] = useState(videoSelecionado.imagem);
+  const [videoLink, setVideoLink] = useState(videoSelecionado.video);
+  const [descricao, setDescricao] = useState(videoSelecionado.descricao);
 
   const handleSubmit = (evento) => {
     evento.preventDefault();
-    onSubmit({ // Envia os dados editados para o componente pai
-      ...video,
+    const videoEditado = {
+      id: videoSelecionado.id,
       titulo,
       categoria,
       imagem,
       video: videoLink,
       descricao
-    });
-    limparCampos();
+    };
+
+    axios.put(`http://localhost:3001/videosDaPlataforma/${videoSelecionado.id}`, videoEditado)
+      .then(response => {
+        atualizarVideo(response.data);
+        onClose();
+      })
+      .catch(error => console.error("Erro ao editar vídeo:", error));
   };
 
-  const limparCampos = () => {
-    setTitulo('');
-    setCategoria('');
-    setImagem('');
-    setVideoLink('');
-    setDescricao('');
-  };
+
 
   return (
     <div className='formularioEditar'>
       <form onSubmit={handleSubmit}>
-      <img className='botaoSair' onClick={onClose} src='../../imagens/cross.png' alt='Imagem saída'/>
+        <img className='botaoSair' onClick={onClose} src='../../imagens/cross.png' alt='Imagem saída' />
         <h2>EDITAR CARD:</h2>
         <CampoTexto
           obrigatorio={true}
@@ -71,7 +71,7 @@ const FormEditar = ({ video, onClose, onSubmit, times }) => {
           valor={descricao}
           aoAlterado={setDescricao}
         />
-        <BotaoFormEditar limparForm={limparCampos}/>
+        <BotaoFormEditar />
       </form>
     </div>
   );

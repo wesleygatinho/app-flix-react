@@ -45,92 +45,20 @@
   ],
   "videosDaPlataforma": [
     {
-      "id": "0142",
-      "titulo": "Wesley Gatinho",
-      "categoria": "Programação",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "Gato seu",
-      "descricao": "GatoMEU"
-    },
-    {
-      "id": "bd0e",
-      "titulo": "Wesley Gatinho",
-      "categoria": "Inovação e Gestão",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "asdadas",
-      "descricao": "sadasd"
-    },
-    {
-      "id": "fa46",
-      "titulo": "Wwwa",
-      "categoria": "Programação",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "dfdf",
-      "descricao": "dsfdsf"
-    },
-    {
-      "id": "8b28",
-      "titulo": "dfsf",
-      "categoria": "Programação",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "sdsd",
-      "descricao": "sdsd"
-    },
-    {
-      "id": "2ax8",
-      "titulo": "dsdsdsd",
-      "categoria": "Programação",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "dsds",
-      "descricao": "sdsssd"
-    },
-    {
-      "id": "bd0e",
-      "titulo": "Wesley Gatinho",
-      "categoria": "Inovação e Gestão",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "asdadas",
-      "descricao": "sadasd"
-    },
-    {
-      "id": "bd0e",
-      "titulo": "Wesley Gatinho",
-      "categoria": "Inovação e Gestão",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "asdadas",
-      "descricao": "sadasd"
-    },
-    {
-      "id": "bd0e",
-      "titulo": "Wesley Gatinho",
-      "categoria": "Inovação e Gestão",
-      "imagem": "https://github.com/wesleygatinho.png",
-      "video": "asdadas",
-      "descricao": "sadasd"
-    },
-    {
-      "id": "8bb2",
-      "titulo": "Gimme Gimme Gimme (slowed and reverb)",
-      "categoria": "Programação",
-      "imagem": "https://i.ytimg.com/vi/-mHMvYn6RVs/maxresdefault.jpg",
-      "video": "https://youtu.be/QGOLSExsaEg",
-      "descricao": "Música Gimme Gimme Gimme - ABBA"
-    },
-    {
-      "id": "106e",
-      "titulo": "sdsd",
-      "categoria": "",
-      "imagem": "dwdw",
-      "video": "wdwd",
-      "descricao": "wdwd"
-    },
-    {
       "id": "4da6",
-      "titulo": "Daft Punk - Get Lucky (slowed + reverb)",
-      "categoria": "Programação",
+      "titulo": "PUK HARZARD",
+      "categoria": "Data Science",
       "imagem": "https://i1.sndcdn.com/artworks-FnjrbRAJ6CPhM8A0-FTt0GQ-t1080x1080.jpg",
       "video": "https://youtu.be/L-h5Cs0Vpj0",
       "descricao": "Daft Punk - Get Lucky"
+    },
+    {
+      "id": "4a78",
+      "titulo": "Crystal Waters - Gypsy Woman (Slowed + Reverb) // Mitsuru Haraguchi Rx-7 Edit - UDKM",
+      "categoria": "Front-End",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSuKH105ZY_bmyIpDqqFlMTABzZ0SpUze8fw&s",
+      "video": "https://youtu.be/NyD7Yjt39CI",
+      "descricao": "Song: Crystal Waters - Gypsy Woman  Disclaimer: The song its not mine ,i just make my magic and put it in there 😉 Here are the original creators:  Crystal Waters:"
     }
   ]
 }

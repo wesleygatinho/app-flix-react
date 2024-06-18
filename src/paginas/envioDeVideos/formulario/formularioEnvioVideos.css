@@ -64,7 +64,11 @@
         padding: 12px 12px;
     }
 
-    .formulario h2, h4, h1{
+    .formulario h2, h1{
+        padding: 5px 0;
+    }
+
+    .h4-form{
         padding: 5px 0;
     }
 }

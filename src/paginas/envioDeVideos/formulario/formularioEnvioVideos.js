@@ -35,7 +35,7 @@ const FormularioEnvioVideos = ({ aoVideoCadastrado, times }) => {
     <section className='formulario'>
       <form onSubmit={aoSalvar}>
         <h2>NOVO VÍDEO</h2>
-        <h4>Complete o formulário para criar um novo card de vídeo.</h4>
+        <h4 className='h4-form'>Complete o formulário para criar um novo card de vídeo.</h4>
         <h1>Criar Card</h1>
         <div className='formatar-form'>
           <CampoTexto

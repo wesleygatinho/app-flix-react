@@ -1,19 +1,21 @@
-.colaborador {
-    width: 430px;
-    border-radius: 10px;
+.video-plataforma {
+    max-width: 423px;
+    border-radius: 20px;
     min-width: 422px;
-    min-height: 516px;
+    min-height: 261px;
 }
 
-.cabecalho {
+.cabecalho-video-plataforma {
     width: 100%;
+    position: relative;
+    z-index: 0;
 }
 .img-cabecalho {
     width: 100%;
-    border-radius: 1%;    
+    border-radius: 15px;
 }
 
-.rodape {
+.rodape-video-plataforma {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +25,11 @@
     border-radius: 0px 0px 6px 6px;
     padding-top: 1px;
     padding-bottom: 1px;
+
+    border-radius: 15px;
 }
 
-.rodape div{
+.rodape-video-plataforma div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,18 +37,18 @@
     gap: 16px;
 }
 
-.rodape img{
+.rodape-video-plataforma img{
     cursor: pointer;
 }
 
-.rodape h4 {
+.rodape-video-plataforma h4 {
     color: #fff;
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
 }
 
-.rodape h5 {
+.rodape-video-plataforma h5 {
     font-size: 18px;
     line-height: 22px;
     color: #212121;

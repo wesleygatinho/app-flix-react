@@ -47,18 +47,42 @@
     {
       "id": "4da6",
       "titulo": "PUK HARZARD",
-      "categoria": "Data Science",
+      "categoria": "Programação",
       "imagem": "https://i1.sndcdn.com/artworks-FnjrbRAJ6CPhM8A0-FTt0GQ-t1080x1080.jpg",
       "video": "https://youtu.be/L-h5Cs0Vpj0",
       "descricao": "Daft Punk - Get Lucky"
     },
     {
-      "id": "4a78",
+      "id": "5603",
+      "titulo": "Eminem - Mockingbird",
+      "categoria": "Programação",
+      "imagem": "https://i1.sndcdn.com/artworks-000072263734-b4172l-t500x500.jpg",
+      "video": "https://youtu.be/ASKEeKG5Ll4?list=RD7hUbvIJ0Hnw",
+      "descricao": "Eminem - Mockingbird"
+    },
+    {
+      "id": "e3fe",
+      "titulo": "Who Is She x The Perfect Girl (IanAsher Full TikTok Remix) [prod. purple drip boy]",
+      "categoria": "Front-End",
+      "imagem": "https://static.qobuz.com/images/covers/rb/m4/a2fhcubjpm4rb_600.jpg",
+      "video": "https://youtu.be/vKS7oUXwg_w?list=RD7hUbvIJ0Hnw",
+      "descricao": "Who Is She x The Perfect Girl (IanAsher Full TikTok Remix) [prod. purple drip boy]"
+    },
+    {
+      "id": "676e",
       "titulo": "Crystal Waters - Gypsy Woman (Slowed + Reverb) // Mitsuru Haraguchi Rx-7 Edit - UDKM",
       "categoria": "Front-End",
-      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSuKH105ZY_bmyIpDqqFlMTABzZ0SpUze8fw&s",
-      "video": "https://youtu.be/NyD7Yjt39CI",
-      "descricao": "Song: Crystal Waters - Gypsy Woman  Disclaimer: The song its not mine ,i just make my magic and put it in there 😉 Here are the original creators:  Crystal Waters:"
+      "imagem": "https://i1.sndcdn.com/artworks-000293537250-7zdtc1-t500x500.jpg",
+      "video": "https://youtu.be/NyD7Yjt39CI?list=RD7hUbvIJ0Hnw",
+      "descricao": "Crystal Waters - Gypsy Woman (Slowed + Reverb) // Mitsuru Haraguchi Rx-7 Edit - UDKM"
+    },
+    {
+      "id": "1489",
+      "titulo": "wwwww",
+      "categoria": "Programação",
+      "imagem": "https://i1.sndcdn.com/artworks-000293537250-7zdtc1-t500x500.jpg",
+      "video": "ssss",
+      "descricao": "sss"
     }
   ]
 }

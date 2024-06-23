@@ -4,11 +4,11 @@ import './videosPlataforma.css';
 const VideosPlataforma = ({corDeFundo, editarDoCompVideos, imagem, titulo, id, deletar}) => {
 
     return (
-        <div className="colaborador" style={{ border: `5px solid ${corDeFundo}` }}>
-            <div className="cabecalho">
+        <div className="video-plataforma" style={{ border: `5px solid ${corDeFundo}`, background:`${corDeFundo}` }}>
+            <div className="cabecalho-video-plataforma">
                 <img className='img-cabecalho' src={imagem} alt={titulo} />
             </div>
-            <div className="rodape">
+            <div className="rodape-video-plataforma">
                 <div>
                     <img
                         className="imagens-card"

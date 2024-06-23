@@ -31,6 +31,15 @@ const FormEditar = ({ onClose, times, videoSelecionado, atualizarVideo }) => {
       .catch(error => console.error("Erro ao editar vídeo:", error));
   };
 
+  const limparCampos = () => {
+    setTitulo('');
+    setCategoria('');
+    setImagem('');
+    setVideoLink('');
+    setDescricao('');
+  };
+
+
 
 
   return (
@@ -60,18 +69,20 @@ const FormEditar = ({ onClose, times, videoSelecionado, atualizarVideo }) => {
           aoAlterado={setImagem}
         />
         <CampoTexto
+          obrigatorio={true}
           label="Vídeo"
           placeholder="Insira link vídeo"
           valor={videoLink}
           aoAlterado={setVideoLink}
         />
         <CampoTexto
+          obrigatorio={true}
           label="Descrição"
           placeholder="Sobre o que é este vídeo?"
           valor={descricao}
           aoAlterado={setDescricao}
         />
-        <BotaoFormEditar />
+        <BotaoFormEditar limparForm={limparCampos} />
       </form>
     </div>
   );

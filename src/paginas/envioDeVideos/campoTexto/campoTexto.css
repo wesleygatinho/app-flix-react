@@ -20,6 +20,7 @@
     box-sizing: border-box;
 }
 
+
 @media (max-width: 650px) {
     .campo-texto{
         width: 100%;

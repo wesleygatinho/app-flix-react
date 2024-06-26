@@ -5,7 +5,9 @@ const EmDestaque = () => {
   const videos = [
     "https://www.youtube.com/embed/izGwDsrQ1eQ?autoplay=1&loop=1&playlist=izGwDsrQ1eQ",
     "https://www.youtube.com/embed/ulZQTrV8QlQ?autoplay=1&loop=1&playlist=ulZQTrV8QlQ",
-    "https://www.youtube.com/embed/eNvUS-6PTbs?autoplay=1&loop=1&playlist=eNvUS-6PTbs"
+    "https://www.youtube.com/embed/eNvUS-6PTbs?autoplay=1&loop=1&playlist=eNvUS-6PTbs",
+    "https://www.youtube.com/embed/yds28ieN29M?autoplay=1&loop=1&playlist=yds28ieN29M",
+    "https://www.youtube.com/embed/h4UqMyldS7Q?autoplay=1&loop=1&playlist=h4UqMyldS7Q"
   ];
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -29,7 +31,9 @@ const EmDestaque = () => {
           ></iframe>
         </div>
         <div className='textos'>
-          <button onClick={nextVideo}>NEXT</button>
+          <button onClick={nextVideo}>NEXT
+            <img src='/imagens/next.png'/>
+          </button>
           <h1>SEO com REACT</h1>
           <p>
             "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.

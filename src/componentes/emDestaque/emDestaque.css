@@ -86,10 +86,14 @@
     color: #Ffffff;
     border: none;
     border-radius: 15px;
-
     cursor: pointer;
+    gap: 20px;
+    
 }
 
+.conteudos-destaque button img{
+    width: 80px;    
+}
 
 @media (max-width: 1250px){
     .destaques{
